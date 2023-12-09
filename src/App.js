@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="relative">
       <Navbar />
-
       <Routes>
         <Route path="/" exact element={<HomePage />} />
         <Route path="/signUp" element={<Authentication />} />
