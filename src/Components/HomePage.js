@@ -20,34 +20,6 @@ import LowLight from "./images/Section7.1.png";
 
 import Arrow from "./icons/Arrow.png";
 
-const productData = [
-  { name: "Aglaonema", price: 250, image: Plant1 },
-  { name: "Golden King Marble", price: 340, image: Plant2 },
-  { name: "Radish", price: 260, image: Radish },
-  { name: "Sanservia Fernwood", price: 250, image: Plant4 },
-];
-
-const ProductCard = ({ name, price, image }) => (
-  <div className="w-[100%] h-auto flex">
-    {/* Actually that rounded card is present here ,remove the flex above here */}
-    <div className="flex flex-col w-[100%] h-[260px] left-0 top-0 bg-zinc-100 rounded-[15px]" />
-    <div className="flex flex-col">
-      {/* have added a div and flex-col , thats y  the card came like a row*/}
-      <img
-        className="w-[100%] h-[214.38px] left-[-8px] top-[33.73px] origin-top-left rotate-[-1.22deg]"
-        src={image}
-        alt={name}
-      />
-      <div className="left-[17px] top-[267px]text-black text-lg font-normal font-['Ubuntu'] leading-[30px]">
-        {name}
-        <br />${price}
-      </div>
-    </div>
-    <div className="w-[26px] h-[26px] pl-0.5 pr-px pt-0.5 pb-px left-[195px] top-[16px] justify-center items-center inline-flex">
-      <div className="w-[23px] h-[23px]flex-col justify-start items-start flex" />
-    </div>
-  </div>
-);
 
 function HomePage() {
   return (
@@ -66,7 +38,7 @@ function HomePage() {
         </div>
         <div className="w-[184px] h-12 mt-10 bg-green-900 rounded-[50px] ">
           <div className="items-center justify-around flex w-[184px] h-12 bg-lime-400 bg-opacity-20 rounded-[50px] backdrop-blur-[21px]">
-            <div className="text-white text-base font-normal font-Ubuntu">
+            <div className="text-white text-base font-normal font-Ubuntu cursor-pointer hover:cursor-pointer">
               Shop Now
             </div>
             <div className="w-[34px] h-[34px] bg-lime-600 bg-opacity-50 rounded-full backdrop-blur-[88px]">
@@ -77,19 +49,52 @@ function HomePage() {
       </div>
       {/* SECTION-----2 */}
 
-      <div className=" w-[100%] h-auto flex-col items-center flex">
+      <div className=" w-[100%] h-auto items-center flex flex-col">
         <div className="text-black text-4xl font-medium font-Ubuntu p-6">
           Our Recent Products
         </div>
-        <div className="flex w-[80%] justify-between h-autopb-[40px]">
-          {productData.map((product, index) => (
-            <ProductCard key={index} {...product} />
-          ))}
+        <div className="flex space-x-10">
+          <div className="flex flex-col hover:bg-lime-400 items-center">
+            <div className="flex flex-col justify-center items-center hover:bg-lime-400 w-60 h-[300px] bg-zinc-100 rounded-[15px]">
+              <img className="w-[150px]" src={Plant1} alt="Plant" />
+            </div>
+            <div className="text-black text-lg font-normal font-'Ubuntu' leading-[30px]">
+              Aglaonema
+              <br />$ 250
+            </div>
+          </div>
+          <div className="flex flex-col hover:bg-lime-400 items-center">
+            <div className="flex flex-col justify-center items-center hover:bg-lime-400 w-60 h-[300px] bg-zinc-100 rounded-[15px]">
+              <img className="w-[200px]" src={Plant2} alt="Plant" />
+            </div>
+            <div className="text-black text-lg font-normal font-'Ubuntu' leading-[30px]">
+              Golden King Marble
+              <br />$ 340
+            </div>
+          </div>
+          <div className="flex flex-col hover:bg-lime-400 items-center">
+            <div className="flex flex-col justify-center items-center hover:bg-lime-400 w-60 h-[300px] bg-zinc-100 rounded-[15px]">
+              <img className="w-[200px]" src={Radish} alt="Plant" />
+            </div>
+            <div className="text-black text-lg font-normal font-'Ubuntu' leading-[30px]">
+              Radish
+              <br />$ 260
+            </div>
+          </div>
+          <div className="flex flex-col hover:bg-lime-400 items-center">
+            <div className="flex flex-col justify-center items-center hover:bg-lime-400 w-60 h-[300px] bg-zinc-100 rounded-[15px]">
+              <img className="w-[200px]" src={Plant4} alt="Plant" />
+            </div>
+            <div className="text-black text-lg font-normal font-'Ubuntu' leading-[30px]">
+              Sanservia
+              <br />$ 250
+            </div>
+          </div>
         </div>
       </div>
-      {/* NEEDS atlest 50px down to add hover effect  to bottm */}
+
       {/* SECTION ------3 */}
-      <div className="flex justify-evenly w-[100%] h-auto bg-stone-50 bg-opacity-70">
+      <div className="flex justify-evenly w-[100%] h-auto bg-stone-50 bg-opacity-70 mt-[50px]">
         <div className="flex flex-col">
           <div className="text-green-950 text-[40px] font-medium font-Ubuntu">
             The world's
@@ -117,7 +122,6 @@ function HomePage() {
       </div>
       {/* SECTION-----4 */}
       <div className="w-[100%] items-center flex flex-col pb-[30px]">
-        {/* padding bottom not working */}
         <div className="text-black text-[35px] font-medium font-'Ubuntu' py-[20px]">
           Our Services
         </div>
@@ -130,7 +134,7 @@ function HomePage() {
           <img
             className="w-[20%] h-[380px] rounded-[10px]"
             src={Section42}
-            alt="Easy Plant Kits"
+            alt="Landscaping"
           />
           <img
             className="w-[20%] h-[380px] rounded-[10px]"
@@ -142,7 +146,6 @@ function HomePage() {
             src={Section44}
             alt="Easy Plant Kits"
           />
-          {/* Try to find another image */}
         </div>
       </div>
       {/* SECTION-----5 */}
@@ -251,13 +254,14 @@ function HomePage() {
             <span className="text-white text-3xl font-medium font-'Ubuntu' capitalize leading-[52px]"></span>
             <span className="text-white text-3xl font-bold font-'Ubuntu' capitalize leading-[52px]">
               franchise ownership
-              {/* needs a gap */}
             </span>
-            <span className="text-white text-3xl font-medium font-'Ubuntu' capitalize leading-[52px]  ">
-              <div className=" flex items-center justify-center w-[239px] h-[60px] bg-white bg-opacity-90 rounded-[45px] backdrop-blur-[30px]">
-                <div className=" text-green-900 text-[25px] font-medium font-'Ubuntu' capitalize leading-[52px] ">
-                  Enquire Now
-                  {/* this button needs a pt */}
+
+            <span className="text-white text-3xl font-medium font-'Ubuntu' capitalize leading-[52px] ">
+              <div className="mt-[15px]">
+                <div className=" flex items-center justify-center w-[239px] h-[60px] bg-white bg-opacity-90 rounded-[45px] backdrop-blur-[30px] ">
+                  <div className=" text-green-900 text-[25px] font-medium font-'Ubuntu' capitalize leading-[52px]  ">
+                    Enquire Now
+                  </div>
                 </div>
               </div>
             </span>
@@ -266,25 +270,37 @@ function HomePage() {
         <img className="w-[40%] h-[300px]" src={Building} alt="Building" />
       </div>
       {/* SECTION--------8 */}
-      <div className=" flex flex-col items-center  w-[90%] m-auto space-y-4 ">
+      <div className=" flex flex-col items-center  w-[90%] m-auto space-y-4 mt-[15px] ">
         <div className="text-black text-[34px] font-medium font-'Ubuntu' capitalize leading-[70px]">
           categories
         </div>
         <div className="flex  space-x-10  ">
           <div className=" flex flex-col w-[300px] h-[350px] bg-lime-400 bg-opacity-20 rounded-[30px] items-center">
-            <img className="w-[250px] h-[280px]" src={Plant5} alt="" />
+            <img
+              className="w-[230px] h-[230px] mt-[25px]"
+              src={Plant5}
+              alt=""
+            />
             <div className="text-black text-[27px] font-medium font-'Ubuntu' capitalize leading-[70px]">
               Plants
             </div>
           </div>
           <div className=" flex flex-col w-[300px] h-[350px] bg-lime-400 bg-opacity-20 rounded-[30px] items-center justify-center">
-            <img className="w-[180px] h-[180px]" src={Pot} alt="Pot" />
+            <img
+              className="w-[180px] h-[180px] mt-[25px]"
+              src={Pot}
+              alt="Pot"
+            />
             <div className="text-black text-[27px] font-medium font-'Ubuntu' capitalize leading-[70px]">
               Pot
             </div>
           </div>
           <div className=" flex flex-col w-[300px] h-[350px] bg-lime-400 bg-opacity-20 rounded-[30px] items-center justify-center">
-            <img className="w-[250px] h-[180px]" src={Plants} alt="Plants" />
+            <img
+              className="w-[250px] h-[180px] mt-[25px]"
+              src={Plants}
+              alt="Plants"
+            />
             <div className="text-black text-[27px] font-medium font-'Ubuntu' capitalize leading-[70px]">
               Combos
             </div>
@@ -292,11 +308,11 @@ function HomePage() {
         </div>
       </div>
       {/* SECTION------9 */}
-      <div className="flex flex-col pb-[100px]">
+      <div className="flex flex-col pt-[30px] pb-[100px] justify-center items-center ">
         <div className="text-black text-3xl font-medium font-'Ubuntu' capitalize leading-[70px] pb-[80px]">
           Sub categories
         </div>
-        <div className="flex">
+        <div className="flex ">
           <div className=" flex items-center w-[416px] h-28 bg-lime-400 bg-opacity-20 rounded-[20px] ">
             <img
               className=" relative bottom-[50px] w-[150px] "
@@ -314,7 +330,7 @@ function HomePage() {
               alt="Low Light Plant"
             />
             <div className="text-black text-3xl font-medium font-'Ubuntu' capitalize leading-[70px]">
-              Flowering Plants
+              Low Light Plants
             </div>
           </div>
           <div className=" flex items-center w-[416px] h-28 bg-lime-400 bg-opacity-20 rounded-[20px] ">

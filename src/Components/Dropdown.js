@@ -1,7 +1,6 @@
 import React from "react";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import User from "./icons/User.png";
 
 function Dropdown() {
@@ -12,7 +11,7 @@ function Dropdown() {
     <div>
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 pt-1 text-sm font-semibold text-gray-900 shadow-sm  hover:bg-gray-50">
+          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 pt-1 text-sm font-semibold text-gray-900 shadow-sm  ">
             <img src={User} alt="User" />
             {/* <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" /> */}
           </Menu.Button>
@@ -31,7 +30,7 @@ function Dropdown() {
               <Menu.Item>
                 {({ active }) => (
                   <a
-                    href="/"
+                    href="/signUp"
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                       "block px-4 py-2 text-sm",
@@ -43,7 +42,7 @@ function Dropdown() {
               <Menu.Item>
                 {({ active }) => (
                   <a
-                    href="/"
+                    href="/login"
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                       "block px-4 py-2 text-sm",
