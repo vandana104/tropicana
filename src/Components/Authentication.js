@@ -14,7 +14,7 @@ function Authentication() {
     } else {
       setHeader("Verification");
     }
-  }, []);
+  }, [location.pathname]);
 
   const [otp, setOtp] = useState(["", "", "", ""]);
   const otpInputRefs = Array.from({ length: 4 }, () => React.createRef());
@@ -22,13 +22,11 @@ function Authentication() {
   const handleOtpChange = (e, index) => {
     const value = e.target.value;
 
-    // Handle backspace
     if (e.code === "Backspace" && index > 0) {
       otpInputRefs[index - 1].current.focus();
       return;
     }
 
-    // Allow only digits
     const cleanedValue = value.replace(/\D/g, "");
 
     const newOtp = [...otp];
@@ -36,7 +34,6 @@ function Authentication() {
 
     setOtp(newOtp);
 
-    // Move to the next input field
     if (cleanedValue !== "" && index < otpInputRefs.length - 1) {
       otpInputRefs[index + 1].current.focus();
     }
