@@ -1,4 +1,73 @@
-# Getting Started with Create React App
+# E-Commerce Plant Shop
+
+Welcome to our E-Commerce website for selling plants and accessories! This repository contains the source code for our responsive user interface built using React, HTML, CSS, Tailwind, and JavaScript.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Tech Stacks](#tech-stacks)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+Our E-Commerce Plant Shop is an online platform designed to provide users with a seamless experience in buying plants and related accessories. The website offers a visually appealing and user-friendly interface to make the shopping process enjoyable.
+
+## Tech Stacks
+
+The project is built using the following technologies:
+
+- **React**: A JavaScript library for building user interfaces.
+- **HTML**: Standard markup language for creating the structure of web pages.
+- **CSS**: Style sheet language used for describing the look and formatting of a document.
+- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
+- **JavaScript**: A programming language that enables interactive web pages.
+
+## Features
+
+- Responsive UI: The website is designed to be accessible and visually appealing across various devices.
+- User Authentication: Users can sign up or log in by clicking on the user icon in the navigation bar.
+- Seamless Shopping: Intuitive navigation and a straightforward shopping process for a delightful user experience.
+
+## Getting Started
+
+To get started with the project, follow these steps:
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/vandana104/tropicana.git
+   ```
+
+2. Install the necessary dependencies:
+
+   ```bash
+   cd e-commerce-plant-shop
+   npm install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm start
+   ```
+
+4. Open your browser and visit https://harveystay.netlify.app to view the website.
+
+## Usage
+
+Explore the website, browse through the available plants and accessories, and enjoy a smooth shopping experience. Sign up or log in to access additional features.
+
+## Contributing
+
+We welcome contributions from the community! If you find a bug or have a suggestion, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Feel free to use and modify the code for your purposes.# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
