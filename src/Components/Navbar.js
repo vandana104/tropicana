@@ -1,8 +1,11 @@
 import React from "react";
 import Logo from "./images/logo.png";
+import Logo2 from "./images/Logo2.png";
 import Search from "./icons/Search.png";
 import Cart from "./icons/Cart.png";
 import User from "./icons/User.png";
+import Dropdown from "./Dropdown";
+
 
 function Navbar() {
   // console.log("working");
@@ -17,33 +20,29 @@ function Navbar() {
   ];
 
   return (
-    <div className="w-[1278px] h-[94px] bg-gray-200 rounded-[50px] backdrop-blur-[53px]">
-      <div className="w-[1189px] h-[41px] relative">
-        <img className="w-[229px] h-[72px]" src={Logo} alt="Logo" />
-        <div className="left-[428px] top-[17px] absolute text-black text-lg font-normal font-['Ubuntu']">
-          Home
-        </div>
-        <div className="left-[515px] top-[17px] absolute text-black text-lg font-normal font-['Ubuntu']">
+    <div className=" flex justify-between items-center top-[30px] left-[10%] absolute top-10 z-10 w-[85%] h-[60px] bg-gray-200 rounded-[50px] backdrop-blur-[53px]">
+      {/* <div className="w-[1189px] h-[41px] relative"> */}
+      <img className="w-[130px] h-[30px] ml-[35px]" src={Logo2} alt="Logo" />
+      <div className="flex items-center">
+        <div className=" text-black text-lg font-normal font-Ubuntu p-[20px] ">Home</div>
+        <div className=" text-black text-lg font-normal font-Ubuntu p-[25px] ">
           About Us
         </div>
-        <div className="left-[626px] top-[17px] absolute text-black text-lg font-normal font-['Ubuntu']">
+        <div className=" text-black text-lg font-normal font-Ubuntu p-[25px] ">
           Services
         </div>
-        <div className="left-[728px] top-[17px] absolute text-black text-lg font-normal font-['Ubuntu']">
-          Shop
-        </div>
-        <div className="left-[807px] top-[17px] absolute text-black text-lg font-normal font-['Ubuntu']">
+        <div className="  text-black text-lg font-normal font-Ubuntu">Shop</div>
+        <div className=" text-black text-lg font-normal font-Ubuntu p-[25px] ">
           Contact Us
         </div>
-        <div className="w-6 h-6 left-[1051px] top-[11px] absolute" />
-        <div className="w-6 h-6 p-0.5 left-[1108px] top-[11px] absolute justify-center items-center inline-flex">
-          <div className="w-5 h-5 relative flex justify-between">
-            <img src={Search} alt="Search Icon" />
-            <img src={Cart} alt="Cart Icon" />
-            <img src={User} alt="User Icon" />
-          </div>
-        </div>
-        <div className="w-6 h-6 left-[1165px] top-[11px] absolute" />
+      </div>
+
+      <div className="flex justify-between mr-[35px]">
+        <img className="w-6 h-6" src={Search} alt="Search Icon" />
+        <div className="w-4" /> {/* Add space between icons */}
+        <img className="w-6 h-6" src={Cart} alt="Cart Icon" />
+        <div className="w-4" /> {/* Add space between icons */}
+        <Dropdown/>
       </div>
     </div>
   );
